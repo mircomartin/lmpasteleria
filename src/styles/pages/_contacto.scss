@@ -1,0 +1,67 @@
+.contacto {
+    &__wrapperTitle {
+        background-color: $bgDos;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+    }
+    &__title {
+        font-weight: 700;
+        color: $colorTitulos;
+        font-size: 32px;
+        text-align: center;
+        padding-bottom: 30px;
+        position: relative;
+        &::after{
+            content: '';
+            height: 1px;
+            width: 50px;
+            background-color: $colorTitulos;
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 25px);
+        }
+    }
+    &__details {
+        font-weight: 700;
+        text-align: center;
+        color: $colorTitulos;
+        margin-bottom: 30px;
+        a {
+            color: $colorTitulos;
+        }
+        i {
+            font-size: 20px;
+        }
+    }
+    &__datos {
+        line-height: 27px;
+        text-align: center;
+    }
+    &__input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $colorParrafo;
+        line-height: 21px;
+        padding: 10px;
+        &:hover {
+            background-color: $bgUno;
+        }
+        &:focus {
+            background-color: $bgDos;
+            outline: none;
+        }
+    }
+    .area {
+        height: 300px;
+    }
+    &__enviar {
+        border: none;
+        background-color: transparent;
+        transition: .15s ease all;
+        &:hover {
+            color: $colorHover;
+            cursor: pointer;
+        }
+    }
+}

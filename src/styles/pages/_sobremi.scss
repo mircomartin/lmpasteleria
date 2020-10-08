@@ -1,0 +1,57 @@
+.sobremi {
+    background-color: $bgDos;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &__title {
+        font-weight: 700;
+        color: $colorTitulos;
+        font-size: 32px;
+        text-align: center;
+        padding-bottom: 30px;
+        position: relative;
+        margin-bottom: 25px;
+        &::after{
+            content: '';
+            height: 1px;
+            width: 50px;
+            background-color: $colorTitulos;
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 25px);
+        }
+    }
+    &__subtitle {
+        text-align: center;
+        font-weight: 700;
+
+    }
+    &__wrapperImg {
+        margin-top: 80px;
+        text-align: center;
+    }
+    &__img {
+        border-radius: 50%;
+    }
+    &__historia {
+        line-height: 22.5px;
+        margin-top: 80px;
+        margin-bottom: 20px;
+        &:last-of-type {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sobremi {
+        &__wrapperImg {
+            margin-top: 40px;
+        }
+        &__historia {
+            font-size: 14px;
+            padding: 0 40px;
+            margin-top: 40px;
+        }
+    }
+}

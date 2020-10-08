@@ -1,0 +1,83 @@
+.header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: calc(100vw - 16px);
+    height: auto;
+    background-color: #fff;
+    &__wrapper {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 3px solid $colorTitulos;
+    }
+    &__img {
+        width: 50px;
+    }
+    &__navbarLink {
+        color: $colorParrafo;
+        transition: .15s ease color;
+        &:hover {
+            color: $colorHover;
+        }
+    }
+    &__redes {
+        text-align: right;
+        a {
+            color: $colorParrafo;
+            margin-right: 20px;
+            transition: .15s ease color;
+            &:hover {
+                color: $colorHover;
+            }
+            &:last-of-type {
+                margin-right: 0;
+            }
+            i {
+                font-size: 18px;
+            }
+        }
+    }
+    .hamburguesa {
+        cursor: pointer;
+        z-index: 999;
+        i {
+            font-size: 22px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        width: 100vw;
+        &__heading {
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        &__navbarWrapper {
+            position: absolute;
+            background-color: $bgUno;
+            width: 102vw;
+            height: 101vh;
+            left: 100%;
+            top: 0;
+            z-index: 1;
+            overflow-x: hidden; 
+            transition: .5s ease left;
+        }
+        &__navbar {
+            height: 100%;
+        }
+        &__navbarLink {
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: .2rem;
+            text-transform: uppercase;
+            border-bottom: 1px solid $colorParrafo;
+            padding: 20px;
+        }
+        .mobileActive {
+            left: 0!important;
+        }
+    }
+}
