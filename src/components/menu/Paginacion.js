@@ -7,9 +7,17 @@ export const Paginacion = ({ postsPerPage, totalPosts, paginate }) => {
 		pageNumbers.push(i);
 	}
 
+	const link = document.querySelector("#link")
+
+	if(link){
+		link.addEventListener('click', () => {
+			window.scroll(0,0)
+		})
+	}
+
 	return (
 		<nav className="col-auto">
-			<ul className="pagination">
+			<ul className="pagination" id="link">
 				{pageNumbers.map((number) => (
 					<li key={number} className="pagination__item">
 						<button onClick={() => paginate(number)} className="pagination__link">
